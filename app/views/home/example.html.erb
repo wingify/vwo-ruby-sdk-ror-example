@@ -1,0 +1,47 @@
+<div>
+  <h2 class="center  color-blue">VWO SDK Example (ROR) </h2>
+  <div class="main-container">
+    <div class="left-container">
+      <h2 class="center  color-grey">Settings</h2>
+      <pre id="settings"><%= settings_file %></pre>
+    </div>
+
+    <div class="right-container">
+      <div class="half-containers">
+        <h2 class="center  color-grey">Details</h2>
+
+        <div class="center  margin--top">
+          <div>Campaign test key - <strong><%= ab_campaign_key %></strong></div>
+        </div>
+        <div class="center margin--top">
+          <div>Campaign goal identifier - <strong><%= ab_campaign_goal_identifier %></strong></div>
+        </div>
+
+        <div class="center  margin--top">
+          <div>User ID - <strong><%= user_id %></strong></div>
+        </div>
+
+        <%  if part_of_campaign %>
+        <div class="center  margin--top">
+          <div>variationAssigned - <strong><%= variation_name %></strong></div>
+        </div>
+        <%  else %>
+        <div class="center  margin--top">
+          <div>did not become a part of campaign</div>
+        </div>
+        <% end %>
+      </div>
+      <div class="half-containers  center">
+        <%  if (variation_name == 'Control') %>
+          <button class="v1">Control</button>
+        <% elsif (variation_name == 'Variation-1') %>
+          <button class="v2">Variation 1</button>
+        <% elsif (variation_name == 'Variation-2') %>
+          <button class="v3">Variation 2</button>
+        <% else %>
+          <button>Not part</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
