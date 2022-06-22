@@ -54,7 +54,7 @@ variation_name = vwo_client_instance.activate(campaign_key, user_id)
 variation_name = vwo_client_instance.get_variation(campaign_key, user_id)
 
 # Track API
-vwo_client_instance.track(campaign_key, user_id', goal_identified, revenue_value)
+vwo_client_instance.track(campaign_key, user_id, goal_identified, revenue_value)
 
 ```
 
